@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="teacher-container">
+        <h1>Teacher Dashboard</h1>
+        <form id="schedule-appointment-form">
+            <h2>Schedule Appointment</h2>
+            <input type="text" id="student-name" placeholder="Student Name" required>
+            <input type="date" id="appointment-date" required>
+            <input type="time" id="appointment-time" required>
+            <button type="submit">Schedule Appointment</button>
+        </form>
+        <form id="approve-appointment-form">
+            <h2>Approve/Cancel Appointment</h2>
+            <input type="text" id="appointment-id" placeholder="Appointment ID" required>
+            <select id="appointment-status">
+                <option value="approved">Approve</option>
+                <option value="cancelled">Cancel</option>
+            </select>
+            <button type="submit">Update Status</button>
+        </form>
+        <div id="messages-section">
+            <h2>View Messages</h2>
+            <!-- Messages will be dynamically inserted here -->
+        </div>
+    </div>
+    <script src="../firebase-config.js"></script>
+    <script src="teacher.js"></script>
+</body>
+</html>
